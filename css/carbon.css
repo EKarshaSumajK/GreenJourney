@@ -1,0 +1,145 @@
+/* Reset CSS */
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+   font-family: Arial, sans-serif;
+   line-height: 1.6;
+   background-color: #f4f4f4;
+}
+
+.container {
+   max-width: 1200px;
+   margin: 0 auto;
+   padding: 20px;
+   
+}
+
+/* Header Styles */
+header {
+   color: black;
+   padding: 20px 0;
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   text-align: left;
+   
+}
+.cons{
+   display: flex;
+   justify-content: space-between;
+}
+
+/* Calculator Section Styles */
+.calculator {
+   padding: 50px 0;
+   text-align: center;
+   border-radius: 8px;
+}
+
+.calculator h2 {
+   font-size: 28px;
+   margin-bottom: 30px;
+}
+
+.calculator form {
+   margin-bottom: 20px;
+}
+
+.calculator label {
+   display: block;
+   margin-bottom: 10px;
+}
+
+.calculator input[type="number"],
+.calculator select {
+   width: 100%;
+   padding: 10px;
+   border: 1px solid #ccc;
+   border-radius: 5px;
+}
+
+.calculator button {
+   background-color: #3caea3;
+   color: #fff;
+   padding: 10px 20px;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+}
+.form-group {
+   display: flex;
+   align-items: center; /* Align items vertically */
+   margin-bottom: 25px; /* Space between form groups */
+ }
+ 
+ .form-group label {
+   margin-right: 10px; /* Space between label and input */
+   flex: 0 0 150px; /* Fixed width for the label */
+   text-wrap: nowrap;
+ }
+ 
+ .form-group input,
+ .form-group select {
+   flex: 1; /* Take the remaining space */
+   padding: 8px; /* Add some padding for better appearance */
+ }
+ 
+
+.calculator button:hover {
+   background-color: #2a9d8f;
+}
+
+#result-details {
+   display: none;
+}
+
+/* Footer Styles */
+footer {
+   background-color: #00563f;
+   color: #fff;
+   padding: 20px 0;
+   text-align: center;
+}
+
+/* Carbon Info Section Styles */
+.carbon-info {
+   padding: 50px 0;
+   background-color: #fff;
+}
+
+.carbon-info h2, .carbon-info h3 {
+   font-size: 28px;
+   margin-bottom: 30px;
+}
+
+.carbon-info p,
+.carbon-info ul {
+   font-size: 16px;
+   margin-bottom: 20px;
+}
+
+.carbon-info ul {
+   list-style: disc;
+   padding-left: 20px;
+}
+
+.carbon-info li {
+   margin-bottom: 10px;
+}
+
+img {
+   float: right;
+   margin-left: 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+   img {
+       float: none;
+       display: block;
+       margin: 20px auto;
+   }
+}

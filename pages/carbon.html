@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carbon Footprint Calculator</title>
+    <link rel="stylesheet" href="../css/carbon.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="container cons">
+          <h1>Green Journey</h1>
+          <a href="home.html" style="color: black;text-decoration: none;">Home</a>
+        </div>
+      </nav>
+    </header>
+
+    <section class="calculator">
+      <div class="container">
+        <h2>Carbon Footprint Calculator</h2>
+        <form id="carbon-form" aria-labelledby="carbon-form-label">
+            <div class="form-group">
+                <label for="distance">Distance (km):</label>
+                <input
+                  type="number"
+                  id="distance"
+                  name="distance"
+                  required
+                  min="0"
+                  step="0.1"
+                  aria-describedby="distance-help"
+                />
+              </div>
+              <div class="form-group">
+                <label for="mode">Mode of Transportation:</label>
+                <select id="mode" name="mode" required>
+                  <option value="">Select a mode</option>
+                  <option value="bike">🚴 Bike</option>
+                  <option value="car">🚗 Car</option>
+                  <option value="bus">🚌 Bus</option>
+                  <option value="train">🚆 Train</option>
+                  <option value="flight">✈️ Flight</option>
+                </select>
+              </div>
+              
+          <button type="submit">Calculate</button>
+
+          <div id="result" aria-live="polite" style="margin-top: 10px"></div>
+        </form>
+
+        <div id="result-details" style="display: none">
+          <h3>Your Carbon Footprint</h3>
+          <p id="footprint"></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="carbon-info">
+      <div class="container">
+        <h1>Understanding Carbon Footprint</h1>
+        <p>
+          Carbon footprint is the total amount of greenhouse gases emitted
+          directly or indirectly by human activities, usually expressed in
+          equivalent tons of carbon dioxide (CO2). It is a measure of the impact
+          of human activities on the environment in terms of their contribution
+          to global warming and climate change.
+        </p>
+        <h1>Carbon Footprint of Tourism</h1>
+        <h2>How Travel is Contributing to the Climate Emergency?</h2>
+        <img
+          src="../Media/carbonpng.png"
+          alt="Carbon Footprint"
+          width="450"
+          height="400"
+        />
+        <p>
+          Tourism is responsible for roughly 8% of the world's carbon emissions.
+          From plane flights and boat rides to souvenirs and lodging, various
+          activities contribute to tourism’s carbon footprint...
+        </p>
+
+        <h1>Factors Affecting Carbon Footprint</h1>
+        <p>
+          Several factors contribute to an individual's or organization's carbon
+          footprint:
+        </p>
+        <ul>
+          <li>
+            Transportation: Emissions from cars, buses, trains, airplanes, etc.
+          </li>
+          <li>Energy Use: Consumption of electricity, heating, and cooling.</li>
+          <li>
+            Food Production: Emissions from agriculture, livestock, and food
+            transportation.
+          </li>
+          <li>
+            Waste Generation: Emissions from landfills and waste treatment.
+          </li>
+        </ul>
+
+        <h3>Reducing Carbon Footprint</h3>
+        <p>
+          There are various ways to reduce carbon footprint and minimize
+          environmental impact:
+        </p>
+        <ul>
+          <li>
+            Use of Renewable Energy: Transitioning to renewable sources of
+            energy.
+          </li>
+          <li>
+            Energy Efficiency: Improving energy efficiency in buildings and
+            appliances.
+          </li>
+          <li>
+            Sustainable Transportation: Opting for public transportation,
+            biking, or walking.
+          </li>
+          <li>
+            Waste Reduction: Recycling, composting, and reducing consumption.
+          </li>
+        </ul>
+
+        <p>
+          By making conscious choices and adopting sustainable practices,
+          individuals and organizations can play a significant role in
+          mitigating climate change and preserving the environment for future
+          generations.
+        </p>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2024 GreenRoute - All Rights Reserved</p>
+      </div>
+    </footer>
+
+    <script>
+      document
+        .getElementById("carbon-form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); // Prevent form submission
+
+          // Get input values
+          var distance = parseFloat(document.getElementById("distance").value);
+          var mode = document.getElementById("mode").value;
+
+          // Calculate carbon footprint
+          var carbonFootprint;
+          switch (mode) {
+            case "bike":
+              carbonFootprint = distance * 0.025;
+              break;
+            case "car":
+              carbonFootprint = distance * 0.2;
+              break;
+            case "bus":
+              carbonFootprint = distance * 0.1;
+              break;
+            case "train":
+              carbonFootprint = distance * 0.05;
+              break;
+            case "flight":
+              carbonFootprint = distance * 0.2;
+              break;
+            default:
+              carbonFootprint = 0;
+          }
+
+          // Display the result
+          document.getElementById("result-details").style.display = "block";
+          document.getElementById("footprint").textContent =
+            carbonFootprint.toFixed(2) + " kg CO2";
+        });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,133 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Header Styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.logo {
+    font-size: 30px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+
+.nav a {
+    margin-left: 1rem;
+    color: #000;
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 0.5rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Section Styles */
+.section-header {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.section-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Property Card Styles */
+.property-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: calc(33.333% - 20px);
+    transition: transform 0.2s;
+}
+
+.property-card:hover {
+    transform: scale(1.02);
+}
+
+.property-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.property-card h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #00563f;
+    margin: 1rem;
+}
+
+.property-card ul {
+    padding: 0 1rem 1rem 1rem;
+    list-style: none;
+    color: #666;
+}
+
+.property-card .price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #337ab7;
+    margin: 0 1rem 1rem 1rem;
+}
+
+.property-card .rating {
+    margin: 0 1rem 1rem 1rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.property-card .actions {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    border-top: 1px solid #eee;
+}
+
+.property-card .actions a {
+    background-color: #337ab7;
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.property-card .actions a:hover {
+    background-color: #23527c;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .property-card {
+        width: 100%;
+    }
+}

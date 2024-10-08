@@ -1,0 +1,98 @@
+/* Reset CSS */
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+   font-family: 'Arial', sans-serif;
+   line-height: 1.6;
+   background-color: #f4f4f4;
+   color: #333;
+}
+
+.container {
+   max-width: 1200px;
+   margin: 0 auto;
+   padding: 20px;
+}
+
+/* Header Styles */
+header {
+   color: #000;
+   padding: 20px 0 10px 0;
+}
+
+header h1 {
+   display: inline;
+   font-size: 30px;
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+header nav ul {
+   list-style: none;
+   float: right;
+}
+
+header nav ul li {
+   display: inline;
+   margin-right: 20px;
+   color: #000;
+}
+
+header nav ul li:last-child {
+   margin-right: 0;
+}
+
+header nav ul li a {
+   color: #fff;
+   text-decoration: none;
+}
+
+/* Travel Tips Section Styles */
+.travel-tips {
+   padding: 50px 0;
+}
+
+.travel-tips h2 {
+   font-size: 28px;
+   margin-bottom: 20px;
+   color: #00563f;
+}
+
+.travel-tips p {
+   font-size: 16px;
+   margin-bottom: 20px;
+}
+
+/* Tips Container */
+.tips-container {
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+   gap: 20px;
+}
+
+/* Tip Card Styles */
+.tip-card {
+   background-color: #e9f5ef;
+   border: 1px solid #00563f;
+   border-radius: 8px;
+   padding: 20px;
+   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+   transition: transform 0.3s;
+}
+
+.tip-card:hover {
+   transform: scale(1.05);
+}
+
+/* Footer Styles */
+footer {
+   background-color: #00563f;
+   color: #fff;
+   padding: 20px 0;
+   text-align: center;
+   margin-top: 30px;
+}
